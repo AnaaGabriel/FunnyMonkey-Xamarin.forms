@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:form="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FunnyMonkey_Xamarin.forms.Views.Pictures">
+
+    <StackLayout>
+        <form:CarouselView x:Name="Carousel">
+            <form:CarouselView.ItemTemplate >
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding .Name}" FontSize="30" HorizontalTextAlignment="Center"></Label>
+                        <Image Source="{Binding .Image}"></Image>
+                    </StackLayout>
+                </DataTemplate>
+            </form:CarouselView.ItemTemplate>
+        </form:CarouselView>
+    </StackLayout>
+</ContentPage>
