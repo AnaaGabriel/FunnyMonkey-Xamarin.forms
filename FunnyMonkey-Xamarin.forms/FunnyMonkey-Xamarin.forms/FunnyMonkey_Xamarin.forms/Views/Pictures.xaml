@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:FunnyMonkey_Xamarin.forms"
              xmlns:form="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FunnyMonkey_Xamarin.forms.Views.Pictures">
+             x:Class="FunnyMonkey_Xamarin.forms.Views.Pictures" BackgroundColor="Black">
 
     <StackLayout>
-        <form:CarouselView x:Name="Carousel">
+        <form:CarouselView x:Name="Carousel" ItemsSource="{Binding Lista}" Position="{Binding Position, Mode=TwoWay}">
             <form:CarouselView.ItemTemplate >
                 <DataTemplate>
                     <StackLayout>
@@ -15,5 +16,7 @@
                 </DataTemplate>
             </form:CarouselView.ItemTemplate>
         </form:CarouselView>
+
+        <local:IndicadoresCarousel x:Name="Indicadores"  IndicatorHeight="16" IndicatorWidth="16" UnselectedIndicator="naoSelecionado.png" SelectedIndicator="selecionado.png" Position="{Binding Position}" ItemsSource="{Binding Lista}" />
     </StackLayout>
 </ContentPage>

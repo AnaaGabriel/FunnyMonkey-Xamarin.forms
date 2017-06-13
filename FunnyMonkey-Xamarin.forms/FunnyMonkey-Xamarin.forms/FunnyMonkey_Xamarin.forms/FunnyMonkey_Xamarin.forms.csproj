@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IndicadoresCarousel.cs" />
     <Compile Include="Models\Monkey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Pictures.xaml.cs">
